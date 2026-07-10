@@ -1,0 +1,6 @@
+{
+  "name": "Học Tiếng Trung Hoa Ngữ Thông Minh",
+  "description": "Học tiếng Trung thông minh với Flashcard 3D, Quiz tương tác, tập viết chữ Hán và OCR tạo bài học từ ảnh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
