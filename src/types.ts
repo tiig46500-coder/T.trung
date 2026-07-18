@@ -24,6 +24,8 @@ export interface UserProgress {
   completedTopics: string[]; // List of topic IDs
   favoriteWords: string[]; // List of Chinese characters
   errorWordPool: string[]; // List of Chinese characters currently flagged for review
+  streakFreezes: number; // Number of protective freezes remaining
+  dailyXpHistory?: Record<string, number>; // "YYYY-MM-DD" -> XP gained
 }
 
-export type ActiveTab = "learn" | "quiz" | "review" | "upload" | "progress";
+export type ActiveTab = "learn" | "quiz" | "review" | "upload" | "progress" | "chat";

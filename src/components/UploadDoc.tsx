@@ -105,9 +105,13 @@ export const UploadDoc: React.FC<UploadDocProps> = ({ onAddCustomTopic }) => {
 
     try {
       setStatusMessage("Gemini AI đang nhận diện chữ viết & biên dịch cấu trúc...");
+      const customKey = localStorage.getItem("custom_gemini_api_key") || "";
       const response = await fetch("/api/parse-document", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+          "Content-Type": "application/json",
+          "X-Custom-Key": customKey
+        },
         body: JSON.stringify({
           imageBase64,
           mimeType,
